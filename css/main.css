@@ -366,9 +366,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 800px;
-  height: 100vh;
-  margin: 0 auto;
+  max-width: 800px;
+  height: 100%;
+  margin: 8px auto;
   grid-area: content; }
 
 .wrapper {
@@ -376,14 +376,11 @@ body {
   width: 700px;
   height: 60px;
   margin-bottom: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   border-radius: 30px;
   background: #254D32; }
+  @media (max-width: 768px) {
+    .wrapper {
+      width: 90vw; } }
 
 .input {
   height: 60px;
@@ -440,10 +437,23 @@ body {
   grid-template-columns: 140px 1fr;
   -ms-grid-rows: 140px 1fr;
   grid-template-rows: 140px 1fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 30px; }
+  @media (max-width: 768px) {
+    .profile {
+      width: 90vw;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
 
 .profile__img {
   -ms-grid-row: 1;
@@ -454,12 +464,11 @@ body {
   grid-area: img; }
 
 .profile__info {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  height: 100%;
   margin-left: 16px;
-  grid-area: info;
   color: white; }
+  @media (max-width: 768px) {
+    .profile__info {
+      margin: 0; } }
 
 .profile__name {
   padding: 16px;
@@ -476,6 +485,19 @@ body {
   grid-gap: 16px;
   padding-top: 16px;
   width: 100%; }
+  @media (max-width: 768px) {
+    .repos {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
+@media (max-width: 768px) {
+  .repo {
+    margin: 8px 0; } }
 
 .repos__wrapper {
   -ms-grid-row: 2;
